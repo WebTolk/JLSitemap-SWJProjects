@@ -44,7 +44,7 @@ class JFormFieldToolbar extends FormField
 			'support');
 
 		// Add donate button
-		$link = 'https://www.septdir.com/donation#solution=jlsitemap-swjprojects';
+		$link = 'https://www.septdir.com/donate#solution=jlsitemap-swjprojects';
 		$toolbar->appendButton('Custom', $this->getButton($link, 'PLG_JLSITEMAP_SWJPROJECTS_DONATE', 'heart'),
 			'donate');
 
