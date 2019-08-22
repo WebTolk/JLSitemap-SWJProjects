@@ -43,18 +43,13 @@ class JFormFieldToolbar extends FormField
 		$toolbar->appendButton('Custom', $this->getButton($link, 'PLG_JLSITEMAP_SWJPROJECTS_SUPPORT', 'support'),
 			'support');
 
-		// Add donate button
-		$link = 'https://www.septdir.com/donate#solution=jlsitemap-swjprojects';
-		$toolbar->appendButton('Custom', $this->getButton($link, 'PLG_JLSITEMAP_SWJPROJECTS_DONATE', 'heart'),
-			'donate');
-
 		// Add donate message
 		$message = new FileLayout('donate_message');
 		$message->addIncludePath(__DIR__);
 		Factory::getApplication()->enqueueMessage($message->render(), '');
 
 		// Toolbar Style
-		Factory::getDocument()->addStyleDeclaration('#toolbar-support,#toolbar-donate{float: right;}');
+		Factory::getDocument()->addStyleDeclaration('#toolbar-support{float: right;}');
 	}
 
 	/**
