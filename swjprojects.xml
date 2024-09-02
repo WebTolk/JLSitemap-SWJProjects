@@ -1,30 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="3.9" type="plugin" group="jlsitemap" method="upgrade">
+<extension type="plugin" group="jlsitemap" method="upgrade">
 	<name>PLG_JLSITEMAP_SWJPROJECTS</name>
-	<author>Septdir Workshop</author>
-	<creationDate>August 2019</creationDate>
-	<copyright>Copyright (c) 2018 - 2019 Septdir Workshop. All rights reserved.</copyright>
+	<author>Septdir Workshop, Sergey Tolkachyov</author>
+	<creationDate>June 2024</creationDate>
+	<copyright>Copyright (c) 2018 - 2024 Septdir Workshop, Sergey Tolkachyov. All rights reserved.</copyright>
 	<license>https://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
-	<authorEmail>development@septdir.com</authorEmail>
-	<authorUrl>https://www.septdir.com/</authorUrl>
-	<version>1.0.1-dev</version>
-	<description>PLG_JLSITEMAP_SWJPROJECTS_DESCRIPTION</description>
+	<authorEmail>info@web-tolk.ru</authorEmail>
+	<authorUrl>https://web-tolk.ru</authorUrl>
+	<version>2.0.0</version>
+	<description>PLG_SWJPROJECTS_DESC</description>
+	<namespace path="src">Joomla\Plugin\Jlsitemap\Swjprojects</namespace>
 	<scriptfile>script.php</scriptfile>
 	<languages folder="language">
-		<language tag="en-GB">en-GB/en-GB.plg_jlsitemap_swjprojects.ini</language>
-		<language tag="en-GB">en-GB/en-GB.plg_jlsitemap_swjprojects.sys.ini</language>
-		<language tag="ru-RU">ru-RU/ru-RU.plg_jlsitemap_swjprojects.ini</language>
-		<language tag="ru-RU">ru-RU/ru-RU.plg_jlsitemap_swjprojects.sys.ini</language>
+		<language tag="en-GB">en-GB/plg_jlsitemap_swjprojects.ini</language>
+		<language tag="en-GB">en-GB/plg_jlsitemap_swjprojects.sys.ini</language>
+		<language tag="ru-RU">ru-RU/plg_jlsitemap_swjprojects.ini</language>
+		<language tag="ru-RU">ru-RU/plg_jlsitemap_swjprojects.sys.ini</language>
 	</languages>
 	<files>
-		<filename plugin="swjprojects">swjprojects.php</filename>
-		<filename>donate_message.php</filename>
-		<filename>toolbar.php</filename>
+		<folder plugin="swjprojects">src</folder>
+		<folder>services</folder>
+		<filename>swjprojects.xml</filename>
 	</files>
 	<config>
-		<fields name="params" addfieldpath="/plugins/jlsitemap/swjprojects">
+		<fields name="params">
+			<fieldset name="basic">
+				<field addfieldprefix="Joomla\Plugin\Jlsitemap\Swjprojects\Fields"
+					   type="plugininfo"
+					   name="plugininfo"/>
+			</fieldset>
 			<fieldset name="project" label="PLG_JLSITEMAP_SWJPROJECTS_PARAMS_PROJECT">
-				<field type="toolbar"/>
 				<field name="project_enable" type="radio"
 					   label="PLG_JLSITEMAP_SWJPROJECTS_PARAMS_ENABLE"
 					   default="1"
@@ -167,8 +172,9 @@
 		</fields>
 	</config>
 	<updateservers>
-		<server type="extension" priority="1" name="JLSitemap - SW JProjects">
-			https://www.septdir.com/solutions/joomla/update?element=plg_jlsitemap_swjprojects
+		<server type="extension" priority="1" name="JLSitemap - SWJProjects updates">
+			https://web-tolk.ru/component/swjprojects/jupdate?element=plg_jlsitemap_swjprojects
 		</server>
 	</updateservers>
+	<changelogurl>https://web-tolk.ru/jchangelog?element=plg_jlsitemap_swjprojects</changelogurl>
 </extension>
