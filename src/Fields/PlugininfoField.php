@@ -1,7 +1,7 @@
 <?php
 /**
  * @package    JLSitemap - SW JPojects plugin
- * @version    2.0.0
+ * @version    2.0.1
  * @author     Sergey Tolkachyov - web-tolk.ru
  * @copyright  Copyright (c) 2018-2024 Sergey Tolkachyov. All rights reserved.
  * @license    GNU General Public License v3.0
@@ -9,11 +9,13 @@
  */
 
 namespace Joomla\Plugin\Jlsitemap\Swjprojects\Fields;
-\defined('_JEXEC') or die;
 
 use Joomla\CMS\Form\Field\NoteField;
 use Joomla\CMS\Language\Text;
 use Joomla\CMS\Factory;
+use function defined;
+
+defined('_JEXEC') or die;
 
 class PlugininfoField extends NoteField
 {

@@ -1,7 +1,7 @@
 <?php
 /**
  * @package    JLSitemap - SW JPojects plugin
- * @version    2.0.0
+ * @version    2.0.1
  * @author     Sergey Tolkachyov - web-tolk.ru
  * @copyright  Copyright (c) 2018-2024 Sergey Tolkachyov. All rights reserved.
  * @license    GNU General Public License v3.0
@@ -19,8 +19,10 @@ use Joomla\Database\DatabaseAwareTrait;
 use Joomla\Event\Event;
 use Joomla\Event\SubscriberInterface;
 use Joomla\Registry\Registry;
+use function defined;
+use function implode;
 
-\defined('_JEXEC') or die;
+defined('_JEXEC') or die;
 
 final class Swjprojects extends CMSPlugin implements SubscriberInterface
 {

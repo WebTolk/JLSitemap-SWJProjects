@@ -19,7 +19,7 @@ use Joomla\Database\DatabaseDriver;
 use Joomla\DI\Container;
 use Joomla\DI\ServiceProviderInterface;
 
-\defined('_JEXEC') or die;
+defined('_JEXEC') or die;
 
 return new class () implements ServiceProviderInterface {
 	public function register(Container $container)
@@ -85,7 +85,6 @@ return new class () implements ServiceProviderInterface {
 			 */
 			public function install(InstallerAdapter $adapter): bool
 			{
-				$this->enablePlugin($adapter);
 
 				return true;
 			}
